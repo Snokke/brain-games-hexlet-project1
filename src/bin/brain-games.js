@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import firstQuestion from '../';
+import welcome from '../';
 
-firstQuestion();
+welcome();
