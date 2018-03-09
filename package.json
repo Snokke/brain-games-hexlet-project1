@@ -1,11 +1,12 @@
 {
   "name": "project1-snokke",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "project 1 (brain games) at hexlet. Session: 236",
   "main": "index.js",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
-    "brain-even": "dist/bin/brain-even.js"
+    "brain-even": "dist/bin/brain-even.js",
+    "brain-calc": "dist/bin/brain-calc.js"
   },
   "files": [
     "dist"
@@ -30,6 +31,7 @@
     "eslint-plugin-import": "^2.9.0"
   },
   "dependencies": {
+    "hexlet-pairs": "^1.0.5",
     "npm": "^5.7.1",
     "readline-sync": "^1.4.9"
   }

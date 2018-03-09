@@ -1,41 +1,57 @@
 import readlineSync from 'readline-sync';
+import { cons, car, cdr } from 'hexlet-pairs';
+import brainEven from './games/even';
+import brainGame from './games/games';
+import brainCalc from './games/calc';
 
-const welcome = () => {
-  console.log('Welcome to the Brain Games!');
-  const actual = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${actual}`);
-};
+const brainGames = (game) => {
+  let gameDescription = '';
+  switch (game) {
+    case 'brain-games':
+      brainGame();
+      break;
+    case 'brain-even':
+      gameDescription = cdr(brainEven());
+      break;
+    case 'brain-calc':
+      gameDescription = cdr(brainCalc());
+      break;
 
-const isEven = (num) => {
-  if (num % 2 === 0) {
-    return true;
+    default:
   }
-  return false;
-};
 
-const getRandomInt = max => Math.floor(Math.random() * Math.floor(max));
-
-const brainEven = () => {
   console.log('\nWelcome to the Brain Games!');
-  console.log('Answer "yes" if number even otherwise answer "no".\n');
-  const name = readlineSync.question('May I have your name? ');
+  console.log(gameDescription);
+  const name = readlineSync.question('\nMay I have your name? ');
   console.log(`Hello, ${name}!\n`);
 
-  const maxRandomNum = 100;
-  const yesAnswer = 'yes';
-  const noAnswer = 'no';
   const rightAnswersForWin = 3;
   for (let i = 0; i < rightAnswersForWin; i += 1) {
-    const randomNum = getRandomInt(maxRandomNum);
-    console.log(`Question: ${randomNum}`);
-    const answer = readlineSync.question('Your answer: ');
+    let gameData = cons();
+    switch (game) {
+      case 'brain-games':
+        brainGame();
+        break;
+      case 'brain-even':
+        gameData = car(brainEven());
+        break;
+      case 'brain-calc':
+        gameData = car(brainCalc());
+        break;
 
-    if ((isEven(randomNum) && answer === yesAnswer) ||
-       (!isEven(randomNum) && answer === noAnswer)) {
+      default:
+    }
+
+    const question = car(gameData);
+    const correctAnswer = cdr(gameData);
+
+    console.log(`Question: ${question}`);
+    const userAnswer = readlineSync.question('Your answer: ');
+
+    if (userAnswer === correctAnswer) {
       console.log('Correct!');
     } else {
-      const rightAnswer = isEven(randomNum) ? yesAnswer : noAnswer;
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.`);
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       console.log(`Let's try again, ${name}!`);
       return;
     }
@@ -44,4 +60,4 @@ const brainEven = () => {
   console.log(`Congratulations, ${name}!`);
 };
 
-export { brainEven, welcome };
+export default brainGames;
