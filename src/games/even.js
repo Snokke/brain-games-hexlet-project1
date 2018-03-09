@@ -1,4 +1,5 @@
-import { startGame, playGame, endGame } from '../index';
+import playGame from '../index';
+import { cons, car, cdr, toString } from 'hexlet-pairs';
 
 const isEven = (num) => {
   if (num % 2 === 0) {
@@ -9,25 +10,22 @@ const isEven = (num) => {
 
 const getRandomInt = max => Math.floor(Math.random() * Math.floor(max));
 
-const brainEven = () => {
-  const maxRandomNum = 100;
-  const yesAnswer = 'yes';
-  const noAnswer = 'no';
-  const gameDescription = 'Answer "yes" if number even otherwise answer "no".';
-
-  const name = startGame(gameDescription);
-
-  const rightAnswersForWin = 3;
-  for (let i = 0; i < rightAnswersForWin; i += 1) {
+const generator = () => {
+  const f = () => {
+    const maxRandomNum = 100;
+    const yesAnswer = 'yes';
+    const noAnswer = 'no';
     const question = getRandomInt(maxRandomNum);
-    const answer = isEven(question) ? yesAnswer : noAnswer;
-    if (!playGame(question, answer)) {
-      endGame(false, name);
-      return;
-    }
-  }
+    const correctAnswer = isEven(question) ? yesAnswer : noAnswer;
+    return cons(question, correctAnswer);
+  };
+  return f;
+};
 
-  endGame(true, name);
+const brainEven = () => {
+  const gameDescription = 'Answer "yes" if number even otherwise answer "no".';
+  const data = generator();
+  playGame(data, gameDescription);
 };
 
 export default brainEven;
