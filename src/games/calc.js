@@ -1,43 +1,40 @@
-import { startGame, playGame, endGame } from '../index';
+import { cons } from 'hexlet-pairs';
+import playGame from '../index';
 
 const getRandomInt = max => Math.floor(Math.random() * Math.floor(max));
 
-const brainCalc = () => {
-  const maxRandomNum = 100;
-  const gameDescription = 'What is the result of the expression?';
-
-  const name = startGame(gameDescription);
-
-  const rightAnswersForWin = 3;
-  for (let i = 0; i < rightAnswersForWin; i += 1) {
+const generator = () => {
+  const f = () => {
+    const maxRandomNum = 100;
     const firstOperand = getRandomInt(maxRandomNum);
     const secondOperand = getRandomInt(maxRandomNum);
     let question = '';
-    let answer = '';
+    let correctAnswer = '';
     const randomOperator = getRandomInt(3);
     switch (randomOperator) {
       case 0:
         question = `${firstOperand} + ${secondOperand}`;
-        answer = String(firstOperand + secondOperand);
+        correctAnswer = String(firstOperand + secondOperand);
         break;
       case 1:
         question = `${firstOperand} - ${secondOperand}`;
-        answer = String(firstOperand - secondOperand);
+        correctAnswer = String(firstOperand - secondOperand);
         break;
       case 2:
         question = `${firstOperand} * ${secondOperand}`;
-        answer = String(firstOperand * secondOperand);
+        correctAnswer = String(firstOperand * secondOperand);
         break;
       default:
     }
+    return cons(question, correctAnswer);
+  };
+  return f;
+};
 
-    if (!playGame(question, answer)) {
-      endGame(false, name);
-      return;
-    }
-  }
-
-  endGame(true, name);
+const brainCalc = () => {
+  const gameDescription = 'What is the result of the expression?';
+  const data = generator();
+  playGame(data, gameDescription);
 };
 
 export default brainCalc;

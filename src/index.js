@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { cons, car, cdr, toString } from 'hexlet-pairs';
+import { car, cdr } from 'hexlet-pairs';
 
 const playGame = (data, gameDescription) => {
   console.log('\nWelcome to the Brain Games!');

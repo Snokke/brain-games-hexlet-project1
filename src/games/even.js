@@ -1,5 +1,5 @@
+import { cons } from 'hexlet-pairs';
 import playGame from '../index';
-import { cons, car, cdr, toString } from 'hexlet-pairs';
 
 const isEven = (num) => {
   if (num % 2 === 0) {
