@@ -1,9 +1,7 @@
-import readlineSync from 'readline-sync';
+import { startGame } from '../index';
 
-const brainGame = () => {
-  console.log('Welcome to the Brain Games!');
-  const actual = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${actual}`);
+const brainGames = () => {
+  startGame('');
 };
 
-export default brainGame;
+export default brainGames;
