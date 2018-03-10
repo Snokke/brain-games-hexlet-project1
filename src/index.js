@@ -9,9 +9,9 @@ const playGame = (data, gameDescription) => {
 
   const rightAnswersForWin = 3;
   for (let i = 0; i < rightAnswersForWin; i += 1) {
-    const result = data();
-    const question = car(result);
-    const correctAnswer = cdr(result);
+    const questionAndAnswer = data();
+    const question = car(questionAndAnswer);
+    const correctAnswer = cdr(questionAndAnswer);
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
 

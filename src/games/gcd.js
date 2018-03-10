@@ -11,21 +11,17 @@ const gcd = (a, b) => {
 };
 
 const generator = () => {
-  const f = () => {
-    const maxRandomNum = 100;
-    const num1 = getRandomInt(maxRandomNum);
-    const num2 = getRandomInt(maxRandomNum);
-    const question = `${num1} ${num2}`;
-    const correctAnswer = String(gcd(num1, num2));
-    return cons(question, correctAnswer);
-  };
-  return f;
+  const maxRandomNum = 100;
+  const num1 = getRandomInt(maxRandomNum);
+  const num2 = getRandomInt(maxRandomNum);
+  const question = `${num1} ${num2}`;
+  const correctAnswer = String(gcd(num1, num2));
+  return cons(question, correctAnswer);
 };
 
 const brainGcd = () => {
   const gameDescription = 'Find the greatest common divisor of given numbers.';
-  const data = generator();
-  playGame(data, gameDescription);
+  playGame(generator, gameDescription);
 };
 
 export default brainGcd;

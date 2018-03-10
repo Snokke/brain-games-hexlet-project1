@@ -11,21 +11,17 @@ const isEven = (num) => {
 const getRandomInt = max => Math.floor(Math.random() * Math.floor(max));
 
 const generator = () => {
-  const f = () => {
-    const maxRandomNum = 100;
-    const yesAnswer = 'yes';
-    const noAnswer = 'no';
-    const question = getRandomInt(maxRandomNum);
-    const correctAnswer = isEven(question) ? yesAnswer : noAnswer;
-    return cons(question, correctAnswer);
-  };
-  return f;
+  const maxRandomNum = 100;
+  const yesAnswer = 'yes';
+  const noAnswer = 'no';
+  const question = getRandomInt(maxRandomNum);
+  const correctAnswer = isEven(question) ? yesAnswer : noAnswer;
+  return cons(question, correctAnswer);
 };
 
 const brainEven = () => {
   const gameDescription = 'Answer "yes" if number even otherwise answer "no".';
-  const data = generator();
-  playGame(data, gameDescription);
+  playGame(generator, gameDescription);
 };
 
 export default brainEven;
