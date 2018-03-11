@@ -1,6 +1,6 @@
 {
   "name": "project1-snokke",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "project 1 (brain games) at hexlet. Session: 236",
   "main": "index.js",
   "bin": {

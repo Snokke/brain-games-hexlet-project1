@@ -3,7 +3,7 @@ import playGame from '../index';
 
 const getRandomInt = max => Math.floor(Math.random() * Math.floor(max));
 
-const generator = () => {
+const dataGenerator = () => {
   const maxRandomNum = 100;
   const firstOperand = getRandomInt(maxRandomNum);
   const secondOperand = getRandomInt(maxRandomNum);
@@ -30,7 +30,7 @@ const generator = () => {
 
 const brainCalc = () => {
   const gameDescription = 'What is the result of the expression?';
-  playGame(generator, gameDescription);
+  playGame(dataGenerator, gameDescription);
 };
 
 export default brainCalc;

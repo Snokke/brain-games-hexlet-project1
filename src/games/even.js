@@ -10,7 +10,7 @@ const isEven = (num) => {
 
 const getRandomInt = max => Math.floor(Math.random() * Math.floor(max));
 
-const generator = () => {
+const dataGenerator = () => {
   const maxRandomNum = 100;
   const yesAnswer = 'yes';
   const noAnswer = 'no';
@@ -21,7 +21,7 @@ const generator = () => {
 
 const brainEven = () => {
   const gameDescription = 'Answer "yes" if number even otherwise answer "no".';
-  playGame(generator, gameDescription);
+  playGame(dataGenerator, gameDescription);
 };
 
 export default brainEven;

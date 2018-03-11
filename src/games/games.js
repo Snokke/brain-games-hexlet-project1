@@ -1,7 +1,7 @@
 import { cons } from 'hexlet-pairs';
 import playGame from '../index';
 
-const generator = () => {
+const dataGenerator = () => {
   const question = '';
   const correctAnswer = '';
   return cons(question, correctAnswer);
@@ -9,7 +9,7 @@ const generator = () => {
 
 const brainGames = () => {
   const gameDescription = '';
-  playGame(generator, gameDescription);
+  playGame(dataGenerator, gameDescription);
 };
 
 export default brainGames;

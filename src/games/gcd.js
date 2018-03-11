@@ -10,7 +10,7 @@ const gcd = (a, b) => {
   return gcd(b, a % b);
 };
 
-const generator = () => {
+const dataGenerator = () => {
   const maxRandomNum = 100;
   const num1 = getRandomInt(maxRandomNum);
   const num2 = getRandomInt(maxRandomNum);
@@ -21,7 +21,7 @@ const generator = () => {
 
 const brainGcd = () => {
   const gameDescription = 'Find the greatest common divisor of given numbers.';
-  playGame(generator, gameDescription);
+  playGame(dataGenerator, gameDescription);
 };
 
 export default brainGcd;
