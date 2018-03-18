@@ -41,11 +41,16 @@ Correct!
 Congratulations, Andrei!
 ```
 
-Asciinema of all games:
+## Asciinema of all games
 
-brain-even - https://asciinema.org/a/BNSrYmTNGAifL3jQriFTMoC1L
-brain-calc - https://asciinema.org/a/wMHyiPGZiLlvMntZeRPpm3c5g
-brain-gcd - https://asciinema.org/a/svHVJgAO7omWIpg2aLO4hKA7f
-brain-balance - https://asciinema.org/a/K8hjy4K3L0UA5D2PzNuFpAMwK
-brain-progression - https://asciinema.org/a/bm1Hap20m9vUNGwT5DI0fnrZO
-brain-prime - https://asciinema.org/a/EcGyHOBadTtKQta5v9BHFCl0e
+ * brain-even - https://asciinema.org/a/BNSrYmTNGAifL3jQriFTMoC1L
+
+* brain-calc - https://asciinema.org/a/wMHyiPGZiLlvMntZeRPpm3c5g
+
+* brain-gcd - https://asciinema.org/a/svHVJgAO7omWIpg2aLO4hKA7f
+
+* brain-balance - https://asciinema.org/a/K8hjy4K3L0UA5D2PzNuFpAMwK
+
+* brain-progression - https://asciinema.org/a/bm1Hap20m9vUNGwT5DI0fnrZO
+
+* brain-prime - https://asciinema.org/a/EcGyHOBadTtKQta5v9BHFCl0e
