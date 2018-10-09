@@ -1,6 +1,6 @@
 {
   "name": "project1-snokke",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "Project 1 (brain games) at hexlet. Session: 236",
   "main": "index.js",
   "homepage": "https://github.com/Snokke/project-lvl1-s236",
@@ -31,16 +31,16 @@
   "devDependencies": {
     "babel-cli": "*",
     "babel-core": "*",
-    "babel-eslint": "^8.2.2",
+    "babel-eslint": "^10.0.1",
     "babel-preset-env": "*",
     "babel-preset-stage-0": "*",
-    "eslint": "^4.18.2",
-    "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-import": "^2.9.0"
+    "eslint": "^5.6.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0"
   },
   "dependencies": {
-    "hexlet-pairs": "^1.0.5",
-    "npm": "^5.7.1",
+    "hexlet-pairs": "^1.0.8",
+    "npm": "^6.4.1",
     "readline-sync": "^1.4.9"
   }
 }
