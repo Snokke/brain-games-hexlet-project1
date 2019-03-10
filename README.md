@@ -22,9 +22,10 @@ To run specific game, type:
 
 ## Demo
 
-Brain games:
+Game **brain-even**:
 
 ```sh
+bash-3.2$ brain-even
 Welcome to the Brain Games!
 Answer "yes" if number even otherwise answer "no".
 
