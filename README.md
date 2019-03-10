@@ -1,4 +1,4 @@
-# Brain games (Project 1 at Hexlet)
+# Brain games
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/bbfaaad9f3e260bac854/maintainability)](https://codeclimate.com/github/Snokke/brain-games-hexlet-project1/maintainability)
 [![Build Status](https://travis-ci.org/Snokke/brain-games-hexlet-project1.svg?branch=master)](https://travis-ci.org/Snokke/brain-games-hexlet-project1)
