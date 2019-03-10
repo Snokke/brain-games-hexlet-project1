@@ -20,7 +20,10 @@ To run specific game, type:
 * brain-progression
 * brain-prime 
 
-## Example
+## Demo
+
+Brain games:
+
 ```sh
 Welcome to the Brain Games!
 Answer "yes" if number even otherwise answer "no".
@@ -40,7 +43,7 @@ Correct!
 Congratulations, Andrei!
 ```
 
-## Demo
+Asciinema`s of all games:
 
 * [brain-even](https://asciinema.org/a/BNSrYmTNGAifL3jQriFTMoC1L)
 
