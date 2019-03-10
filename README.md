@@ -20,7 +20,7 @@ To run specific game, type:
 * brain-progression
 * brain-prime 
 
-## Example:
+## Example
 ```sh
 Welcome to the Brain Games!
 Answer "yes" if number even otherwise answer "no".
