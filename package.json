@@ -31,16 +31,19 @@
   "devDependencies": {
     "babel-cli": "*",
     "babel-core": "^6.26.3",
-    "babel-eslint": "^10.0.1",
+    "babel-eslint": "^10.0.2",
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-0": "*",
-    "eslint": "^5.15.1",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.14.0"
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.0",
+    "lodash": ">=4.17.13"
   },
   "dependencies": {
     "hexlet-pairs": "^1.0.8",
-    "npm": "^6.4.1",
-    "readline-sync": "^1.4.9"
+    "npm": "^6.10.1",
+    "readline-sync": "^1.4.9",
+    "braces": ">=2.3.1",
+    "js-yaml": ">=3.13.1"
   }
 }
